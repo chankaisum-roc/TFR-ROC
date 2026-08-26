@@ -3,7 +3,12 @@ spriteTypes = {
   #Head of Government
 
   #CHI
-
+  #BG
+  spriteType = {
+    name = GFX_CHI_BG
+    texturefile = "gfx/interface/Taipei.dds"
+    alwaystransparent = yes
+  }
   spriteType = {
     name = "GFX_CHI_KMT_logo"
     texturefile = "gfx/texticons/CHI/CHI_KMT.png"
@@ -177,6 +182,14 @@ spriteTypes = {
     texturefile = "gfx/interface/decisions/CHI/CHI_Gain_benefits_from_relationships.png"
   }
   spriteType = {
+    name = "CHI_GAW_decision_category"
+    texturefile = "gfx/interface/decisions/CHI/CHI_GAW_decision_category.png"
+  }
+  spriteType = {
+    name = "CHI_CCW_decision_category"
+    texturefile = "gfx/interface/decisions/CHI/CHI_CCW_decision_category.png"
+  }
+  spriteType = {
     name = "GFX_CHI_PFP_logo"
     texturefile = "gfx/texticons/CHI/CHI_PFP.png"
     legacy_lazy_load = no
@@ -227,13 +240,24 @@ spriteTypes = {
     name = "GFX_USA_MP_Icon"
     texturefile = "gfx/texticons/CHI/USA_MP_Icon.png"
     legacy_lazy_load = no
-  }  
+  }
   spriteType = {
     name = "GFX_artillery_equipment_text_icon"
     texturefile = "gfx/texticons/artillery_equipment_text_icon.png"
     legacy_lazy_load = no
   }
+  spriteType = {
+    name = "GFX_MIO_fund_texticon"
+    texturefile = "gfx/interface/decisions/CHI/MIO_fund_texticon.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_fiscal_budget_texticon"
+    texturefile = "gfx/interface/decisions/CHI/fiscal_budget_texticon.png"
+    legacy_lazy_load = no
+  }
 
+  
   #Bop
   spriteType = {
     name = "GFX_bop_CHI_ROC"

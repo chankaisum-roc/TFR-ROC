@@ -6,30 +6,79 @@ focus_tree = {
   default = no
   focus = {
     id = CHI_compete_for_central_plains
-    x = 0
-    y = 0
-    cost = 0
+    x = 8
+    y = 1
+    cost = 2
     icon = GFX_focus_CHI_compete_for_central_plains
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = CHI_wait_pdto_reorganization_tt
+        OR = {
+          has_global_flag = RAJ_india_dead
+          NOT = { RAJ = { is_in_faction_with = JAP } }
+        }
+      }
+    }
     continue_if_invalid = no
     cancel_if_invalid = yes
+    completion_reward = {
+      country_event = { id = CHI.H4.2 }
+      if = {
+        limit = { country_exists = CHF }
+        country_event = { id = CHI.TW.64 days = 3 }
+      }
+      unlock_decision_category_tooltip = CHI_civilwar_category
+      custom_effect_tooltip = { IDEA = CHI_ROC_army_dynamic localization_key = modify_idea_tt }
+      add_to_variable = {
+        ROC_cannot_call_allies_or_join_wars = 1
+        tooltip = cannot_call_allies_or_join_wars_tooltip
+      }
+      hidden_effect = {
+        set_cosmetic_tag = CHI_UNITED
+        clr_country_flag = pdto_member
+        scoped_play_song = "StrugglingintheSoutheast"
+        leave_faction = yes
+        if = {
+          limit = { is_subject = yes }
+          overlord = { end_puppet = ROOT }
+        }
+      }
+    }
   }
   focus = {
     id = CHI_regional_political_tutelage
-    x = 0
-    y = 1
-    cost = 0
+    x = 8
+    y = 2
+    cost = 2
     icon = GFX_focus_CHI_regional_political_tutelage
     continue_if_invalid = no
     cancel_if_invalid = yes
     prerequisite = {
       focus = CHI_compete_for_central_plains
     }
+    completion_reward = {
+      custom_effect_tooltip = core_decisions_tt
+      hidden_effect = {
+        add_to_variable = { shandong_edu_var = 60 }
+        add_to_variable = { shandong_police_var = 40 }
+        add_to_variable = { shandong_pp_cost_var = 25 }
+        add_to_variable = { shanxi_edu_var = 60 }
+        add_to_variable = { shanxi_police_var = 40 }
+        add_to_variable = { shanxi_pp_cost_var = 25 }
+        add_to_variable = { hebei_edu_var = 60 }
+        add_to_variable = { hebei_police_var = 40 }
+        add_to_variable = { hebei_pp_cost_var = 25 }
+        add_to_variable = { henan_edu_var = 60 }
+        add_to_variable = { henan_police_var = 40 }
+        add_to_variable = { henan_pp_cost_var = 25 }
+      }
+    }
   }
   focus = {
     id = CHI_trust_localities
-    x = -1
-    y = 2
-    cost = 0
+    x = 7
+    y = 3
+    cost = 2
     icon = GFX_focus_CHI_trust_localities
     continue_if_invalid = no
     cancel_if_invalid = yes
@@ -39,12 +88,17 @@ focus_tree = {
     prerequisite = {
       focus = CHI_regional_political_tutelage
     }
+  
+    completion_reward = {
+      country_event = { id = CHI.H4.3 }
+      custom_effect_tooltip = core_1_decisions_tt
+    }
   }
   focus = {
     id = CHI_central_supervision_policy
-    x = 1
-    y = 2
-    cost = 0
+    x = 9
+    y = 3
+    cost = 2
     icon = GFX_focus_CHI_central_supervision_policy
     continue_if_invalid = no
     cancel_if_invalid = yes
@@ -54,33 +108,136 @@ focus_tree = {
     prerequisite = {
       focus = CHI_regional_political_tutelage
     }
+  
+    completion_reward = {
+      country_event = { id = CHI.H4.4 }
+      custom_effect_tooltip = core_2_decisions_tt
+    }
   }
   focus = {
     id = CHI_republic_achieved
-    x = 0
-    y = 4
-    cost = 0
+    x = 8
+    y = 5
+    cost = 2
     icon = GFX_focus_CHI_republic_achieved
     continue_if_invalid = no
     cancel_if_invalid = yes
+    prerequisite = {
+      focus = CHI_trust_localities
+      focus = CHI_central_supervision_policy
+    }
+    available = {
+      has_war = no
+      custom_trigger_tooltip = {
+        tooltip = PRC_reunify_china_tt
+        all_state = {
+          if = {
+            limit = {
+              OR = {
+                state = 328  # Guangdong
+                state = 608  # Beijing
+                state = 1211 # Wuhan / Jianghan
+                state = 1222 # Jinling / Nanjing
+                state = 594  # Yunnan
+                state = 605  # Sichuan / Chengdu
+                state = 622  # Shaanxi / Xi'an
+                state = 283  # Shandong
+                state = 1165 # Henan
+                state = 619  # Shanxi
+                state = 322  # Zhejiang
+              }
+            }
+            is_owned_by = ROOT
+          }
+        }
+        NOT = { country_exists = PRC }
+        NOT = { country_exists = CNT }
+        NOT = { country_exists = NTT }
+        NOT = { country_exists = MST }
+        NOT = { country_exists = NMA }
+        NOT = { country_exists = A74 }
+        NOT = { country_exists = A75 }
+        NOT = { country_exists = A77 }
+        NOT = { country_exists = A78 }
+        NOT = { country_exists = A81 }
+        NOT = { country_exists = A83 }
+        NOT = { country_exists = NSF }
+        NOT = { country_exists = XIE }
+        NOT = { country_exists = TND }
+        NOT = { country_exists = FAL }
+        NOT = { country_exists = APF }
+        NOT = { country_exists = NIS }
+        NOT = { country_exists = IMA }
+        NOT = { country_exists = YUN }
+        NOT = { country_exists = GAN }
+        NOT = { country_exists = SHA }
+        NOT = { country_exists = NCM }
+        NOT = { country_exists = RGT }
+        NOT = { country_exists = JIA }
+        NOT = { country_exists = CAG }
+        NOT = { country_exists = MSC }
+        NOT = { country_exists = HNJ }
+        NOT = { country_exists = UYY }
+        NOT = { country_exists = NLM }
+        NOT = { country_exists = XFT }
+        NOT = { country_exists = ESF }
+        NOT = { country_exists = XSM }
+        NOT = { country_exists = CHF }
+        NOT = { country_exists = SIC }
+      }
+    }
+  
+    completion_reward = {
+      country_event = { id = CHI.H4.5 }
+      remove_dynamic_modifier = { modifier = CHI_Economy }
+      add_dynamic_modifier = { modifier = CHI_Economy_cn }
+      set_portraits = {
+        character = CHI_han_kuo_yu_char
+        civilian = { large = "gfx/Leaders/CHI/CHI_han_kuo_yu_ccw_ending.png" }
+      }
+      set_portraits = {
+        character = CHI_chiang_wan_an_char
+        civilian = { large = "gfx/Leaders/CHI/CHI_chiang_wan_an_ccw_ending.png" }
+      }
+      set_portraits = {
+        character = CHI_zhao_shao_kang_char
+        civilian = { large = "gfx/Leaders/CHI/CHI_zhao_shao_kang_ccw_ending.png" }
+      }
+      hidden_effect = {
+        1148 = { remove_core_of = PRC remove_claim_by = PRC } # 台灣北部
+        1149 = { remove_core_of = PRC remove_claim_by = PRC } # 台灣中部
+        1150 = { remove_core_of = PRC remove_claim_by = PRC } # 台灣南部
+        524 = { remove_core_of = PRC remove_claim_by = PRC }  # 台灣東部
+        1451 = { remove_core_of = PRC remove_claim_by = PRC } # 澎湖
+        648 = { remove_core_of = PRC remove_claim_by = PRC } # 金門島
+        1382 = { remove_core_of = PRC remove_claim_by = PRC } # 中控南沙群島
+        1383 = { remove_core_of = PRC remove_claim_by = PRC } # 越控南沙群島
+        1384 = { remove_core_of = PRC remove_claim_by = PRC } # 菲控南沙群島
+        879 = { remove_core_of = PRC remove_claim_by = PRC }  # 西沙群島
+      }
+    }
   }
   focus = {
     id = CHI_rapid_political_tutelage
-    x = -1
-    y = 5
-    cost = 0
+    x = 7
+    y = 6
+    cost = 2
     icon = GFX_focus_CHI_rapid_political_tutelage
     continue_if_invalid = no
     cancel_if_invalid = yes
     prerequisite = {
       focus = CHI_republic_achieved
     }
+  
+    completion_reward = {
+      country_event = { id = CHI.H4.6 }
+    }
   }
   focus = {
     id = CHI_establish_regional_seats
-    x = -1
-    y = 6
-    cost = 0
+    x = 7
+    y = 7
+    cost = 2
     icon = GFX_focus_CHI_establish_regional_seats
     continue_if_invalid = no
     cancel_if_invalid = yes
@@ -90,50 +247,69 @@ focus_tree = {
   }
   focus = {
     id = CHI_finally_free
-    x = -1
-    y = 7
-    cost = 0
+    x = 8
+    y = 9
+    cost = 2
     icon = GFX_focus_CHI_finally_free
     continue_if_invalid = no
     cancel_if_invalid = yes
     prerequisite = {
-      focus = CHI_establish_regional_seats
+      focus = CHI_begonia_leaf
+    }
+  
+    completion_reward = {
+      country_event = { id = CHI.H4.7 }
+      custom_effect_tooltip = unrestricted_diplomacy_tt
+			set_country_flag = unrestricted_diplomacy_flag
     }
   }
   focus = {
     id = CHI_mongolian_negotiations
-    x = 1
-    y = 5
-    cost = 0
+    x = 9
+    y = 6
+    cost = 2
     icon = GFX_focus_CHI_mongolian_negotiations
     continue_if_invalid = no
     cancel_if_invalid = yes
     prerequisite = {
       focus = CHI_republic_achieved
     }
+    completion_reward = {
+      country_event = { id = CHI.H4.91 }
+    }
   }
   focus = {
     id = CHI_tuva_problem
-    x = 1
-    y = 6
-    cost = 0
+    x = 9
+    y = 7
+    cost = 2
     icon = GFX_focus_CHI_tuva_problem
     continue_if_invalid = no
     cancel_if_invalid = yes
     prerequisite = {
       focus = CHI_mongolian_negotiations
     }
+    completion_reward = {
+      custom_effect_tooltip = CHI_tuva_decision_unlocked_tt
+    }
   }
   focus = {
     id = CHI_begonia_leaf
-    x = 1
-    y = 7
-    cost = 0
+    x = 8
+    y = 8
+    cost = 2
     icon = GFX_focus_CHI_begonia_leaf
     continue_if_invalid = no
     cancel_if_invalid = yes
     prerequisite = {
       focus = CHI_tuva_problem
+    }
+    prerequisite = {
+      focus = CHI_establish_regional_seats
+    }
+    completion_reward = {
+      country_event = { id = CHI.H4.100}
+      country_event = { id = CHI.H4.101 days = 7}
     }
   }
 }

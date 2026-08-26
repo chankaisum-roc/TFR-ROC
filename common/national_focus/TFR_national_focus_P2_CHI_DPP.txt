@@ -1,0 +1,643 @@
+focus_tree = {
+    id = P2_CHI_DPP
+    country = {
+        factor = 0
+    }
+    default = no
+    focus = {
+        id = CHI_island_of_resilience_light_of_hope
+        icon = GFX_goal_unknown
+        x = 31
+        y = 0
+        cost = 3
+    }
+    focus = {
+        id = CHI_three_great_visions
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_island_of_resilience_light_of_hope }
+        x = 31
+        y = 1
+        cost = 3
+    }
+    focus = {
+        id = CHI_smart_prosperous_taiwan
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_three_great_visions }
+        x = 15
+        y = 2
+        cost = 3
+    }
+    focus = {
+        id = CHI_secure_resilient_taiwan
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_three_great_visions }
+        x = 31
+        y = 2
+        cost = 3
+    }
+    focus = {
+        id = CHI_balanced_development_taiwan
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_three_great_visions }
+        x = 47
+        y = 2
+        cost = 3
+    }
+    focus = {
+        id = CHI_biotech_medical_global_layout
+        icon = GFX_goal_unknown
+        prerequisite = { }
+        x = 12
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_overseas_talent_handshake
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_establish_strategic_position }
+        x = 14
+        y = 3
+        cost = 3
+    }
+    focus = {
+        id = CHI_comprehensive_tech_education
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_establish_strategic_position }
+        x = 16
+        y = 3
+        cost = 3
+    }
+    focus = {
+        id = CHI_asia_creativity_factory
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_overseas_talent_handshake }
+        prerequisite = { focus = CHI_comprehensive_tech_education }
+        x = 14
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_ai_new_ten_major_construction
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_asia_creativity_factory }
+        x = 15
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_frontier_tech_research_agency
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_ai_new_ten_major_construction }
+        x = 11
+        y = 7
+        cost = 3
+    }
+    focus = {
+        id = CHI_ai_physical_machinery_rd_center
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_ai_new_ten_major_construction }
+        x = 15
+        y = 7
+        cost = 3
+    }
+    focus = {
+        id = CHI_digital_ai_industry_support
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_ai_new_ten_major_construction }
+        x = 19
+        y = 7
+        cost = 3
+    }
+    focus = {
+        id = CHI_quantum_tech_exploration
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_frontier_tech_research_agency }
+        x = 9
+        y = 8
+        cost = 3
+    }
+    focus = {
+        id = CHI_silicon_photonics_tech_development
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_frontier_tech_research_agency }
+        x = 13
+        y = 8
+        cost = 3
+    }
+    focus = {
+        id = CHI_widespread_ai_application
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_ai_physical_machinery_rd_center }
+        x = 15
+        y = 8
+        cost = 3
+    }
+    focus = {
+        id = CHI_sovereign_ai
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_widespread_ai_application }
+        prerequisite = { focus = CHI_digital_ai_industry_support }
+        x = 22
+        y = 9
+        cost = 3
+    }
+    focus = {
+        id = CHI_cross_strait_17_items
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_secure_resilient_taiwan }
+        x = 35
+        y = 3
+        cost = 3
+    }
+    focus = {
+        id = CHI_strengthen_power_grid_resilience
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_secure_resilient_taiwan }
+        x = 26
+        y = 3
+        cost = 3
+    }
+    focus = {
+        id = CHI_cohesive_will
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_cross_strait_17_items }
+        x = 34
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_curriculum_reform_again
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_cohesive_will }
+        x = 32
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_four_pillars_of_peace
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_cohesive_will }
+        x = 34
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_anti_infiltration_mechanism
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_cross_strait_17_items }
+        x = 39
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_defense_industry_investment
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_four_pillars_of_peace }
+        x = 29
+        y = 8
+        cost = 3
+    }
+    focus = {
+        id = CHI_democratic_world_economic_cooperation
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_four_pillars_of_peace }
+        x = 31
+        y = 7
+        cost = 3
+    }
+    focus = {
+        id = CHI_equal_strait_dialogue_treaty
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_four_pillars_of_peace }
+        x = 34
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_physical_security_management_act
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_anti_infiltration_mechanism }
+        x = 41
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_develop_solar_power
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_strengthen_power_grid_resilience }
+        x = 25
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_develop_offshore_wind_power
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_strengthen_power_grid_resilience }
+        x = 27
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_clear_exchange_bottom_line
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_anti_infiltration_mechanism }
+        x = 37
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_deepen_international_participation
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_four_pillars_of_peace }
+        x = 33
+        y = 8
+        cost = 3
+    }
+    focus = {
+        id = CHI_develop_energy_storage_system
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_develop_offshore_wind_power focus = CHI_develop_solar_power }
+        x = 26
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_public_officials_to_mainland_restrictions
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_anti_infiltration_mechanism }
+        x = 38
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_cross_strait_trade_inspection
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_anti_infiltration_mechanism }
+        x = 40
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_microgrid_distributed_power
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_develop_offshore_wind_power focus = CHI_develop_solar_power }
+        x = 28
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_natural_gas_power
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_develop_offshore_wind_power focus = CHI_develop_solar_power }
+        x = 24
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_promote_net_zero_carbon
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_natural_gas_power focus = CHI_develop_energy_storage_system focus = CHI_microgrid_distributed_power}
+        x = 27
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_ai_smart_energy_management
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_natural_gas_power focus = CHI_develop_energy_storage_system focus = CHI_microgrid_distributed_power}
+        x = 25
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_new_energy_research
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_ai_smart_energy_management focus = CHI_promote_net_zero_carbon }
+        x = 26
+        y = 7
+        cost = 3
+    }
+    focus = {
+        id = CHI_housing_justice_white_paper
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_balanced_development_taiwan }
+        x = 45
+        y = 3
+        cost = 3
+    }
+    focus = {
+        id = CHI_transparent_finance
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_generational_balance }
+        x = 48
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_urban_rural_balance_plan
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_high_speed_rail_extension focus = CHI_eastern_railway_double_tracking }
+        x = 45
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_generational_balance
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_balanced_development_taiwan }
+        x = 49
+        y = 3
+        cost = 3
+    }
+    focus = {
+        id = CHI_strike_housing_market_speculation
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_urban_rural_balance_plan }
+        x = 46
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_popularize_public_housing
+        icon = GFX_goal_unknown
+        prerequisite = { }
+        x = 47
+        y = 7
+        cost = 3
+    }
+    focus = {
+        id = CHI_fiscal_discipline_committee
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_transparent_finance focus = CHI_long_term_care_10_year_plan }
+        x = 49
+        y = 5
+        cost = 3
+    }
+    focus = {
+        id = CHI_high_speed_rail_extension
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_housing_justice_white_paper }
+        x = 46
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_eastern_railway_double_tracking
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_housing_justice_white_paper }
+        x = 44
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_long_term_care_10_year_plan
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_generational_balance }
+        x = 50
+        y = 4
+        cost = 3
+    }
+    focus = {
+        id = CHI_gradual_elimination_education_expenses
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_fiscal_discipline_committee}
+        x = 48
+        y = 6
+        cost = 3
+    }
+    focus = {
+        id = CHI_remember_lessons_of_taiwan_strait_war
+        icon = GFX_goal_unknown
+        x = 24
+        y = 11
+        cost = 3
+    }
+    focus = {
+        id = CHI_guardian_of_the_sky
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_remember_lessons_of_taiwan_strait_war }
+        x = 15
+        y = 12
+        cost = 3
+    }
+    focus = {
+        id = CHI_what_we_fight_for
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_remember_lessons_of_taiwan_strait_war }
+        x = 19
+        y = 12
+        cost = 3
+    }
+    focus = {
+        id = CHI_replace_individual_combat_equipment
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_remember_lessons_of_taiwan_strait_war }
+        x = 24
+        y = 12
+        cost = 3
+    }
+    focus = {
+        id = CHI_csist_rd_projects
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_remember_lessons_of_taiwan_strait_war }
+        mutually_exclusive = { focus = CHI_pdto_unified_design }
+        x = 27
+        y = 12
+        cost = 3
+    }
+    focus = {
+        id = CHI_control_south_china_sea
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_remember_lessons_of_taiwan_strait_war }
+        x = 32
+        y = 12
+        cost = 3
+    }
+    focus = {
+        id = CHI_reverse_engineer_f15
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_guardian_of_the_sky }
+        x = 13
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_contact_mitsubishi_enterprise
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_guardian_of_the_sky }
+        x = 17
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_expand_reserves
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_what_we_fight_for }
+        x = 19
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_localized_whampoa_spirit
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_what_we_fight_for }
+        x = 21
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_pierce_enemy_bulletproof_vests
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_replace_individual_combat_equipment }
+        x = 23
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_increase_survivability_rate
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_pierce_enemy_bulletproof_vests }
+        x = 22
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_focus_human_resources
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_increase_survivability_rate focus = CHI_localized_whampoa_spirit focus = CHI_expand_active_service_benefits}
+        x = 21
+        y = 15
+        cost = 3
+    }
+    focus = {
+        id = CHI_ammunition_self_sufficiency
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_replace_individual_combat_equipment }
+        x = 25
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_pdto_rd_system
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_csist_rd_projects focus = CHI_pdto_unified_design }
+        x = 28
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_domestic_ship_building
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_control_south_china_sea }
+        x = 31
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_american_tech
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_reverse_engineer_f15 }
+        x = 14
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_japan_taiwan_australia_air_force
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_contact_mitsubishi_enterprise }
+        x = 16
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_shield_of_taiwan
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_japan_taiwan_australia_air_force focus = CHI_american_tech}
+        x = 15
+        y = 15
+        cost = 3
+    }
+    focus = {
+        id = CHI_increase_combat_bonus
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_expand_reserves }
+        x = 18
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_expand_active_service_benefits
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_expand_reserves}
+        mutually_exclusive = { focus = CHI_increase_combat_bonus}
+        x = 20
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_truth_within_shooting_radius
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_pierce_enemy_bulletproof_vests }
+        x = 24
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_rejuvenating_kaohsiung_heavy_industries
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_ammunition_self_sufficiency focus = CHI_reference_us_tanks focus = CHI_trap_them_in_port}
+        x = 25
+        y = 15
+        cost = 3
+    }
+    focus = {
+        id = CHI_reference_us_tanks
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_pdto_rd_system }
+        x = 27
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_trap_them_in_port
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_domestic_ship_building }
+        x = 30
+        y = 14
+        cost = 3
+    }
+    focus = {
+        id = CHI_military_loves_people
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_increase_combat_bonus }
+        prerequisite = { focus = CHI_expand_active_service_benefits }
+        x = 19
+        y = 15
+        cost = 3
+    }
+    focus = {
+        id = CHI_popularize_drones
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_guardian_of_the_sky }
+        x = 15
+        y = 13
+        cost = 3
+    }
+    focus = {
+        id = CHI_pdto_unified_design
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_remember_lessons_of_taiwan_strait_war }
+        mutually_exclusive = { focus = CHI_csist_rd_projects }
+        x = 29
+        y = 12
+        cost = 3
+    }
+    focus = {
+        id = CHI_army_belonging_to_taiwanese
+        icon = GFX_goal_unknown
+        prerequisite = { focus = CHI_shield_of_taiwan focus = CHI_military_loves_people focus = CHI_rejuvenating_kaohsiung_heavy_industries}
+        x = 24
+        y = 16
+        cost = 3
+    }
+}

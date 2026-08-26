@@ -6,90 +6,13 @@ on_actions = {
           limit = {
             tag = CHI
           }
-          add_dynamic_modifier = {
-            modifier = CHI_PRC_Infiltration
-          }
-          set_variable = {
-            CHI_PRC_Infiltration_progress_temp = 5
-          }
+          add_dynamic_modifier = { modifier = CHI_PRC_Infiltration }
+          set_variable = { CHI_PRC_Infiltration_progress_temp = 5 }
           PRC_Infiltration_change = yes
 
-          set_variable = {
-            CHI_Assist_reconstruction_progress_temp = 0
-          }
+          set_variable = { CHI_Assist_reconstruction_progress_temp = 0 }
           ARR_reconstruction = yes
 
-          add_dynamic_modifier = {
-            modifier = CHI_taiwanese_independence_dynamic
-          }
-          add_to_variable = {
-            var = CHI_taiwanese_independence_political_power_gain_var
-            value = -0.3
-          }
-          set_country_flag = CHI_ROC_army_flg
-          add_dynamic_modifier = {
-            modifier = CHI_ROC_army_dynamic
-          }
-          add_to_variable = {
-            var = ROC_army_attack_factor
-            value = -0.075
-          }
-          add_to_variable = {
-            var = ROC_army_defence_factor
-            value = -0.025
-          }
-          add_to_variable = {
-            var = ROC_conscription_factor
-            value = -0.3
-          }
-          add_to_variable = {
-            var = ROC_experience_gain_army_factor
-            value = -0.1
-          }
-          add_to_variable = {
-            var = ROC_army_morale_factor
-            value = -0.05
-          }
-          add_to_variable = {
-            var = ROC_experience_gain_factor
-            value = -0.1
-          }
-          add_to_variable = {
-            var = ROC_max_planning
-            value = -0.05
-          }
-          add_to_variable = {
-            var = ROC_unit_upkeep_cost_factor
-            value = -0.01
-          }
-          add_to_variable = {
-            var = ROC_army_org_factor
-            value = -0.05
-          }
-          add_to_variable = {
-            var = ROC_supply_consumption_factor
-            value = -0.075
-          }
-          add_to_variable = {
-            var = ROC_military_development_monthly
-            value = -0.015
-          }
-          add_to_variable = {
-            var = ROC_battalion_upkeep_factor
-            value = -0.075
-          }
-          add_to_variable = {
-            var = ROC_aircraft_upkeep_factor
-            value = -0.075
-          }
-          add_to_variable = {
-            var = ROC_ship_upkeep_factor
-            value = -0.075
-          }
-          add_to_variable = {
-            var = CHI_PRC_Infiltration_timeout_mission_var
-            value = 30
-          }
           set_temp_variable = {
             var = CHI_influence_KMT_temp
             value = 0.3
@@ -125,45 +48,11 @@ on_actions = {
             value = 0.05
           }
           CHI_influence_SDP_add = yes
-          set_variable = {
-            var = CHI_Economy_consumer_goods_factor
-            value = 0.05
-          }
-          set_variable = {
-            var = CHI_Economy_production_speed_buildings_factor
-            value = -0.15
-          }
-          set_variable = {
-            var = CHI_Economy_industrial_capacity_dockyard
-            value = -0.15
-          }
-          set_variable = {
-            var = CHI_Economy_production_speed_energy_farm_factor
-            value = -0.15
-          }
-          set_variable = {
-            var = CHI_Economy_personal_value_factor
-            value = -0.05
-          }
-          set_variable = {
-            var = CHI_Economy_business_value_factor
-            value = 0.05
-          }
-          set_variable = {
-            var = CHI_Economy_poverty_development_monthly
-            value = -0.02
-          }
-          set_variable = {
-            var = CHI_Economy_modifier_unit_modular_light_armor_design_cost_factor
-            value = 0.15
-          }
-          add_dynamic_modifier = {
-            modifier = CHI_Economy
-          }
         }
       }
     }
   }
+
   on_weekly = {
     effect = {
       if = {
@@ -179,9 +68,64 @@ on_actions = {
           CHI = {  # 指定國家
             has_global_flag = PRC_japanese_gaw_victory_global  # 把這裡換成你要監聽的那個國策 ID
           }
+          NOT = { has_country_flag = CHI_gaw_portraits_set }
+          NOT = { has_completed_focus = CHI_republic_achieved }
         }
+        set_country_flag = CHI_gaw_portraits_set
         country_event = {id = CHI.H4.1}
+        set_portraits = {
+          character = CHI_han_kuo_yu_char
+          civilian = { large = "gfx/Leaders/CHI/CHI_han_kuo_yu_gaw_win.png" }
+        }
+        set_portraits = {
+          character = CHI_chiang_wan_an_char
+          civilian = { large = "gfx/Leaders/CHI/CHI_chiang_wan_an_gaw_win.png" }
+        }
+        set_portraits = {
+          character = CHI_lai_ching_te_char
+          civilian = { large = "gfx/Leaders/CHI/CHI_lai_ching_te_gaw_win.png" }
+        }
       }
     }
   }
+
+  on_daily = {
+    effect = {
+      if = {
+        limit = { PRC = { has_completed_focus = PRC_operation_silent_dawn } }
+        CHI = { country_event = { id = CHI.TW.6 } }
+      }
+      if = {
+        limit = { PRC = { has_completed_focus = PRC_shake_up_the_politburo } }
+        CHI = { country_event = { id = CHI.TW.23 } }
+      }
+      if = {
+        limit = { CHI = { is_in_faction_with = JAP } }
+        CHI = { country_event = { id = taiwan.3 } }
+      }
+    }
+  }
+
+  on_monthly_VIN = {
+    effect= {
+      if = {
+        limit = { is_in_faction_with = PRC }
+      }
+      set_country_flag = CHI_enemy_flag
+    }
+  }
+  on_monthly_PHI = {
+    effect= {
+      if = {
+        limit = { is_in_faction_with = PRC }
+      }
+      set_country_flag = CHI_enemy_flag
+    }
+  }
+
+
+
+
+
+
 }

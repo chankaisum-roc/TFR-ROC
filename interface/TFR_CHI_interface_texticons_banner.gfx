@@ -29,4 +29,39 @@ spriteTypes = {
     texturefile = "gfx/texticons/banners/decisions/CHI_Assist_reconstruction_the_Arab_Republic_banner.png"
     legacy_lazy_load = no
   }
+  spriteType = {
+    name = "GFX_CHI_USA_cw_cat_banner"
+    texturefile = "gfx/texticons/banners/decisions/CHI_USA_cw_cat_banner.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_chi_ending_texticon"
+    texturefile = "gfx/texticons/CHI/chi_ending.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_chi_ending_two_texticon"
+    texturefile = "gfx/texticons/CHI/chi_ending_two.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_chi_ending_three_texticon"
+    texturefile = "gfx/texticons/CHI/chi_ending_three.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_CHI_ROCA_texticon"
+    texturefile = "gfx/texticons/CHI/CHI_ROCA.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_CHI_ROCAF_texticon"
+    texturefile = "gfx/texticons/CHI/CHI_ROCAF.png"
+    legacy_lazy_load = no
+  }
+  spriteType = {
+    name = "GFX_CHI_ROCN_texticon"
+    texturefile = "gfx/texticons/CHI/CHI_ROCN.png"
+    legacy_lazy_load = no
+  }
 }

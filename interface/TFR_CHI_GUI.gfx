@@ -41,5 +41,6 @@ spriteTypes = {
 	spritetype = {
 		name = "GFX_UGC"
 		texturefile = "gfx/interface/taiwan/UGC.png"
-	}	
+	}
+	
 }
